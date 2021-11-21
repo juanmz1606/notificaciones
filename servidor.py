@@ -17,6 +17,7 @@ def enviarCorreo():
     asunto = request.args.get("asunto")
     mensaje = request.args.get("mensaje")
     hashString = request.args.get("hash")
+    hashInvitacion = request.args.get("hash-invitacion")
     if  hashString == os.environ.get("SECURITY_HASH"):
         message = Mail(
             from_email=os.environ.get("email_from"),
